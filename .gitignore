@@ -1,0 +1,11 @@
+# ignore out directory
+out/*
+
+# ignore mk, xfiles and DS_Store
+mk_*
+xfiles/*
+.DS_Store*
+
+# ignore backup and zip files.
+*.backup
+*.zip
