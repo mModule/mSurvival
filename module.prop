@@ -1,0 +1,7 @@
+id=MagiskSurvival
+name=Magisk Survival Script
+version=Module (v1)
+versionCode=10
+author=ip
+description=Magisk Survival (addon.d) script.
+updateJson=https://raw.githubusercontent.com/mModule/mSurvival/master/mSurvival.json
