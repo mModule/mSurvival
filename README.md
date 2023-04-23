@@ -4,26 +4,27 @@
 <i>Simple module that copies Magisk's addon.d script into system.</i>
 
 ## Description
-This module is for custom roms (LineageOS for example) that support addon.d survival script.<br>
+This module is for custom roms (LineageOS for example) that support addon.d survival scripts.<br>
 Survival scripts are used to backup and restore additional files/installs during a system (rom) update.<br>
 <i>Most notably would be a GApps install.</i><br>
 
-When Magisk is installed via recovery, it will also install an addon.d script into the `system/addon.d` directory.<br>
-This allows Magisk to survive a an system (rom) OTA update.
+When Magisk is installed via recovery, it will copy it's addon.d script into the `system/addon.d` directory.<br>
+<i>This allows Magisk to survive a system (rom) OTA update.</i>
 
 ---
 
-This module is for devices that do not have a custom recovery (TWRP for example).<br>
+For Magisk installs not (or can not be) installed via recovery.<br>
+The addon.d script can not be copied into `system/addon.d` since system is mounted read-only.<br>
 
-It will overlay Magisk's addon.d script into `system/addon.d` when booted into system.<br>
-Using the system OTA updater when booted into a custom rom that supports survival scripts.<br>
-Magisk's addon.d script will be found and used.<br>
-<i>Magisk will remain after the update.</i>
+This module will overlay a copy of the addon.d script into `system/addon.d`.<br>
+<i>So it can be found and run with other addon.d script(s) during a system OTA update.</i>
+
+<b>Note: This module only works with addon.d-v2 (A/B slot devices).</b>
 
 ## Warning
 This module is only <i>systemless</i> before the first OTA update.<br>
-The addon.d script will be restored into `system/addon.d` during the OTA update.<br>
-After the first OTA update, this module will not be needed and can be removed.
+Magisk's addon.d script will be restored directly into `system/addon.d` by the OTA updater.<br>
+After the first OTA update, this module is no longer needed and can be disabled and/or removed.
 
 ### Download
 Available in the releases tab. [Link](https://github.com/mModule/mSurvival/releases)
@@ -43,4 +44,4 @@ Available in the releases tab. [Link](https://github.com/mModule/mSurvival/relea
 
 ### Credits
 - The Android Community and everyone who has helped me learn through the years.
-- John Wu for all things Magisk.
+- John Wu and team for all things Magisk.
